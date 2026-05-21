@@ -1,0 +1,80 @@
+import type { ThemeConfig } from 'antd';
+
+export const themeConfig: ThemeConfig = {
+  token: {
+    colorPrimary: '#2F6FEB',
+    colorSuccess: '#16A34A',
+    colorWarning: '#D97706',
+    colorError: '#DC2626',
+    colorInfo: '#0EA5E9',
+    colorBgLayout: '#F6F7F9',
+    colorBgContainer: '#FFFFFF',
+    colorBorder: '#E5E7EB',
+    colorBorderSecondary: '#F0F1F3',
+    borderRadius: 8,
+    borderRadiusLG: 12,
+    borderRadiusSM: 6,
+    controlHeight: 36,
+    controlHeightLG: 44,
+    controlHeightSM: 28,
+    fontFamily:
+      '"Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif',
+    fontSize: 14,
+    fontSizeLG: 16,
+    fontSizeHeading1: 28,
+    fontSizeHeading2: 22,
+    fontSizeHeading3: 18,
+    lineHeight: 1.5,
+    motionDurationMid: '0.15s',
+  },
+  components: {
+    Layout: {
+      headerBg: '#FFFFFF',
+      headerHeight: 56,
+      headerPadding: '0 24px',
+      siderBg: '#FFFFFF',
+      bodyBg: '#F6F7F9',
+    },
+    Menu: {
+      itemBg: 'transparent',
+      itemSelectedBg: '#EEF3FE',
+      itemSelectedColor: '#2F6FEB',
+      itemHoverBg: '#F4F6FA',
+      itemBorderRadius: 8,
+      itemMarginInline: 8,
+      itemHeight: 40,
+    },
+    Table: {
+      headerBg: '#FAFBFC',
+      headerColor: '#6B7280',
+      headerSplitColor: 'transparent',
+      rowHoverBg: '#F8FAFD',
+      cellPaddingBlock: 12,
+      cellPaddingInline: 12,
+      borderColor: '#F0F1F3',
+    },
+    Card: {
+      paddingLG: 24,
+      headerBg: 'transparent',
+      headerFontSize: 16,
+    },
+    Button: {
+      controlHeight: 36,
+      paddingInline: 16,
+      fontWeight: 500,
+    },
+    Tag: {
+      defaultBg: '#F4F6FA',
+      defaultColor: '#374151',
+    },
+    Tabs: {
+      itemHoverColor: '#2F6FEB',
+      inkBarColor: '#2F6FEB',
+      titleFontSize: 14,
+    },
+    Statistic: {
+      contentFontSize: 24,
+      titleFontSize: 13,
+    },
+  },
+};
