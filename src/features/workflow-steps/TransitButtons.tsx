@@ -20,6 +20,7 @@ export function TransitButtons({ version }: Props) {
 
   const transitions = availableTransitions(version.status, role);
   if (transitions.length === 0) return null;
+  const primaryIdx = transitions.findIndex((t) => !t.danger);
 
   function execute(to: StatusCode, withComment = '') {
     transit.mutate(
@@ -40,11 +41,12 @@ export function TransitButtons({ version }: Props) {
   return (
     <>
       <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-        {transitions.map((t) => (
+        {transitions.map((t, i) => (
           <Button
             key={t.to}
             type={t.danger ? 'default' : 'primary'}
             danger={t.danger}
+            size={i === primaryIdx ? 'large' : undefined}
             onClick={() => {
               if (t.requiresComment) {
                 setPending({ to: t.to, label: t.label, requiresComment: true });
